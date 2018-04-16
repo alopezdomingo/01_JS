@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EVENTOS innerHTML</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		//En tres recuadro
+		document.getElementById("demo").value;
+		function mostrarTextoA() {
+			document.getElementById("demo").innerHTML=document.getElementById("p1").value;
+		}
+		function mostrarTextoB() {
+			document.getElementById("demo").innerHTML=document.getElementById("p2").value;
+		}
+		function mostrarTextoC() {
+			document.getElementById("demo").innerHTML=document.getElementById("p3").value;
+		}
+	</script>
+</head>
+<body>
+	<header><h3>Lector</h3></header>
+	<center>
+		<input type="text" id="p1" onkeydown="mostrarTextoA()" name="">
+		<input type="text" id="p2" oninput="mostrarTextoB()" name="">
+		<input type="text" id="p3" onkeyup="mostrarTextoC()" name="">
+		<p id="demo"><--&#10048;Aquí está el párrafo del resultado&#10048;--></p>
+	</center>
+	<footer>Ana López</footer>
+</body>
+</html>

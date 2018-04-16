@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04 EVENTOS RADIO BUTTON</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function opciones(){
+			if (document.getElementById('opcion1').checked){
+				alert("Has elegido 1 ---> " + (document.getElementById('opcion1').value));
+			}
+			if (document.getElementById('opcion2').checked){
+				alert("Has elegido 2 ---> " + (document.getElementById('opcion2').value));
+			}
+			if (document.getElementById('opcion3').checked){
+				alert("Has elegido 3 ---> " + (document.getElementById('opcion3').value));
+			} 
+		}
+		function verSexo(){
+			if (document.getElementById('femenino').checked){
+				alert("Has elegido " + (document.getElementById('femenino').value))
+			}else{
+				alert("Has elegido " + (document.getElementById('masculino').value))
+			}
+		}
+	</script>
+</head>
+<body>
+	<header><h3>Eventos Radio button</h3></header>
+		<!------------------------>
+		<h5>Selecciona una opción</h5>
+		<form>
+			<input type="radio" value="tortilla de patatas" id="opcion1">1<br>
+			<input type="radio" value="Hamburguesa" id="opcion2">2<br>
+			<input type="radio" value="Helado" id="opcion3">3
+			<br>
+			<button type="button" onclick="opciones();">Aceptar</button><br>
+			<hr>
+			<input type="radio" name="femenino" value="femenino" id="femenino">Femenino<br><br>
+			<input type="radio" name="masculino" value="masculino" id="masculino">Masculino<br>
+			<button type="button" onclick="verSexo();">Aceptar</button>
+		</form>
+		<!------------------------>
+	<footer>Ana López</footer>
+</body>
+</html>

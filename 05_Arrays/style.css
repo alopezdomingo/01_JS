@@ -1,0 +1,25 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+ body{
+ 	background-color: #EDEEE6;
+ }
+ header{
+ 	background-color: #6F3D48;
+ 	color: #EDEEE6;
+ 	margin:-1em -0.5em;
+ 	padding: 10px;
+ }
+ h2{
+    font-family: 'Roboto', sans-serif;
+ 	margin-left: 15px;
+ }
+ footer{
+ 	background-color: #6F3D48;
+ 	text-align: center;
+ 	color: #EDEEE6;
+ 	font-family: 'Arial';
+ 	position: fixed;
+ 	bottom: 0;
+ 	width: 100%;
+ 	margin:-0.5em -0.5em;
+ 	padding: 10px;
+ }

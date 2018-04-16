@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Presupuestator 20001/title>
+		<meta charset="utf-8">
+		<script>
+			function calcularPresupuesto()
+			{
+				var indice=document.getElementById("cmbProcesador").selectedIndex;
+				var precioProcesador=document.getElementById("cmbProcesador").options[indice].value;
+				indice=document.getElementById("cmbHdd").selectedIndex;
+				var precioHdd=document.getElementById("cmbHdd").options[indice].value;
+				var precioMontaje=0;
+				var precioAntivirus=0;
+				var precioMantenimiento=0;
+				if (document.getElementById("chkMontaje").checked)
+				{
+					 precioMontaje=document.getElementById("chkMontaje").value;
+				}
+				if (document.getElementById("chkAntivirus").checked)
+				{
+					 precioAntivirus=document.getElementById("chkAntivirus").value;
+				}
+				if (document.getElementById("chkMantenimiento").checked)
+				{
+					 precioMantenimiento=document.getElementById("chkMantenimiento").value;
+				}
+				var precioEnvio=0;
+				if (document.getElementById("radioDomicilio").checked)
+				{
+					precioEnvio=document.getElementById("radioDomicilio").value;
+				}
+				var precioTotal=parseFloat(precioProcesador)+parseFloat(precioHdd)+parseFloat(precioMontaje)+parseFloat(precioAntivirus)+parseFloat(precioMantenimiento)+parseFloat(precioEnvio);
+				document.getElementById("txtTotal").value=precioTotal;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Realiza tu presupuesto</h1>
+		<form>
+		<h2>Procesador</h2>
+			<select id="cmbProcesador">
+				<option value="100">i3</option>
+				<option value="150">i5</option>
+				<option value="200">i7</option>
+			</select>
+		<h2>Disco duro</h2>
+			<select id="cmbHdd">
+				<option value="120">4tb</option>
+				<option value="60">1tb</option>
+				<option value="50">500gb</option>
+			</select>
+		<h2>Extras</h2>
+		<input type="checkbox" id="chkMontaje" value="30">Montaje<br>
+		<input type="checkbox" id="chkAntivirus" value="35">Antivirus<br>
+		<input type="checkbox" id="chkMantenimiento" value="100">Mantenimiento<br>
+		<h2>Datos Personales</h2>
+		<input type="text" id="txtNombre"><br>
+		<input type="text" id="txtApellidos"><br>
+		<h2>Selecciona</h2>
+		<input type="radio" id="radioRecogida" name="radioEnvio">Recogida
+		<input type="radio" id="radioDomicilio" name="radioEnvio" value="10">Envío
+		<br><br>
+		<button type="button" onclick="calcularPresupuesto()">Aceptar</button><br>
+		Presupuesto<input type="text" id="txtTotal" readonly>
+		</form>
+	</body>
+</html>

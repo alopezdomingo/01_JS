@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bucle 5</title>
+	<script type="text/javascript">
+		//entrar 15 edades
+		//devolver nº de mayores de edad
+/**
+		var i;
+		for (i=1; i<15; i++){
+			var edades = parseInt(prompt("Introduce edades"));
+			if (edades>18){
+				var contadorAdultos = parseInt(contadorAdultos++);
+				alert("Hay " + contadorAdultos + " mayores de edad"); 
+
+			}
+		}
+**/
+/******
+Dos variables:
+CONTADORES, los contadores cuentan, se incrementan o decrementan en un valor fijo o constante.
+ACUMULADORES, acumulan, variable que se incrementa o decrementa en un valor variable.
+*******/
+ 	var contador = 0;
+ 	for (var i =1; i<=15; i++){
+ 		var edad = prompt("Introduce edad");
+ 		if (edad>=18){
+ 			contador++;
+ 		}
+ 	}
+ 	alert("Hay " + contador + " mayores de edad");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

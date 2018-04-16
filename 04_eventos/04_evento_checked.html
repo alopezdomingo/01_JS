@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evento check</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function opciones(){
+			if (document.getElementById('opcion1').checked){
+				alert("Has elegido 1 ---> " + (document.getElementById('opcion1').value));
+			}
+			if (document.getElementById('opcion2').checked){
+				alert("Has elegido 2 ---> " + (document.getElementById('opcion2').value));
+			}
+			if (document.getElementById('opcion3').checked){
+				alert("Has elegido 3 ---> " + (document.getElementById('opcion3').value));
+			} 
+		}
+	</script>
+</head>
+<body>
+	<header><h3>Eventos Check-box</h3></header>
+		<!------------------------>
+		<form>
+			<input type="checkbox" value="tortilla de patatas" id="opcion1">1<br>
+			<input type="checkbox" value="Hamburguesa" id="opcion2">2<br>
+			<input type="checkbox" value="Helado" id="opcion3">3
+			<br><br>
+			<button type="button" onclick="opciones();">Aceptar</button>
+			
+		</form>
+		<!------------------------>
+	<footer>Ana López</footer>
+</body>
+</html>

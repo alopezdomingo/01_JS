@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>VECTORES 07</title>
+	<script type="text/javascript">
+		//crear arrays
+		var vector100A = new Array(100);
+		var vector100B = new Array(100);
+		//rellenar arrrays
+		for (var i = 0; i < vector100A.length; i++) {
+			vector100A[i]=parseInt(Math.random()*100);
+		}
+		for (var i = 0; i < vector100B.length; i++) {
+			vector100B[i]=parseInt(Math.random()*100);
+		}
+		//definir índices
+		var i= 0;
+		///comparaciones
+		for (var i = 0; i < vector100A.length; i++) {
+			if (vector100A[i]==vector100B[i]){
+			alert("La posición "+(i+1)+"   IGUALES");
+		}else{
+			alert("La posición "+(i+1)+"   Diferentes")
+		}
+		}
+		document.write(vector100A)
+		document.write("<br>")
+		document.write(vector100B)
+		
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

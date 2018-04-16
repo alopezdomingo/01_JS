@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		/**
+			
+		**/
+		function mostrarTexto(elemento) {
+			document.getElementById("demo").innerHTML=elemento.value;
+		}
+	</script>
+	<title>12. Eventos</title>
+</head>
+<body>
+	<header><h2>Selector</h2></header>
+	
+		<p><input type="radio" id="a" value="Sin estudios" onclick="mostrarTexto(this)" name="as">Sin estudios</p>
+		<p><input type="radio" id="b" value="Graduado" onclick="mostrarTexto(this)" name="as">Graduado</p>
+		<p><input type="radio" id="c" value="E.S.O." onclick="mostrarTexto(this)" name="as">E.S.O.</p>
+		<p><input type="radio" id="d" value="Bachiller" onclick="mostrarTexto(this)" name="as">Bachiller</p>
+		<br><hr>
+		<center><b><p id="demo">Resultado</p></b></center>
+	
+	<footer>Ana López</footer>
+</body>
+</html>

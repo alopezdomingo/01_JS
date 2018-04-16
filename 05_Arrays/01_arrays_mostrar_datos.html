@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2. Arrays | NOTAS</title>
+	<script type="text/javascript">
+		var notas = new Array(6);
+		var mes =new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+		for (var i = 0; i < notas.length; i++) {
+			notas[i]=prompt("Introduce las notas del semestre correspondiente al mes de: " + mes[i])
+		}
+		var notaUsu = prompt("Introduce el mes de la nota que quieras recuperar [1-6]");
+		document.write("Las nota es ---> "+notas[notaUsu]);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

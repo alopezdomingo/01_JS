@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Integracion JS | HTML | CSS</title>
+	<style type="text/css">
+		p{
+			color: blue;
+			font-size: 14px;
+		}
+		#titulo{
+			color:red;
+			font-size: 25px;
+		}
+		/***
+		Botón que cambia el color
+		Botón que cambia tamaño de letra
+		Botón que cambia el fondo**/
+		/***/
+	</style>
+	<script type="text/javascript">
+		function cambiar(){
+			document.getElementById('titulo').style.color="black";
+			document.getElementById("titulo").style.fontSize="60px";
+			document.getElementById("titulo").style.backgroundColor="yellow";
+		}
+		function color(){
+			document.getElementById('titulo').style.color="#217B8E";
+			document.getElementById('p1').style.color="#CC306E";
+			document.getElementById('p2').style.color="#61ACBC";
+		}
+		function size(){
+			document.getElementById("titulo").style.fontSize="60px";
+			document.getElementById("p1").style.fontSize="30px";
+			document.getElementById("p2").style.fontSize="30px";
+		}
+		function backG(){
+			document.getElementById("titulo").style.backgroundColor="#D7DEE8";
+			document.getElementById("p1").style.backgroundColor="#D7DEE8";
+			document.getElementById("p2").style.backgroundColor="#D7DEE8";
+		}
+		function reset(){
+			document.getElementById('titulo').style.color="red";
+			document.getElementById("titulo").style.fontSize="25px";
+			document.getElementById("titulo").style.backgroundColor="white";
+			document.getElementById('p1').style.color="#blue";
+			document.getElementById("p1").style.fontSize="14px";
+			document.getElementById("p1").style.backgroundColor="white";
+			document.getElementById('p2').style.color="#blue";
+			document.getElementById("p2").style.fontSize="14px";
+			document.getElementById("p2").style.backgroundColor="white";
+		}
+	</script>
+</head>
+<body>
+	<header><h2>Integración JS | HTML | CSS</h2></header>
+<!-------------------->
+	<h1 id="titulo">Me canso de escribir</h1>
+	<p id="p1">Soy el primer párrafo</p>
+	<p id="p2">Soy el segundo párrafo</p>
+	<button type="button" onclick="cambiar()">Cambiar</button>
+	<center>
+		<button onclick="color()">Cambiar colores</button>
+		<button onclick="size()">Cambiar tamaño</button>
+		<button onclick="backG()">Cambiar fondo</button>
+		<button onclick="reset()#FFFFFFFF">Reset</button>
+	</center>
+
+<!-------------------->
+	<footer>Ana López</footer>	
+</body>
+</html>

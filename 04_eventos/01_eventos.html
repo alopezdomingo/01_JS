@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>JS Eventos</title>
+	<script type="text/javascript">
+		/***
+		Un evento es algo que DESENCADENA
+		EVENTO CLICK
+		OBJETIVO DEL FORMULARIO: Interactuar con el usuario
+		
+		***/
+		function saludo(){
+			var n = document.getElementById('nombre').value;
+			alert("Bienvenido/a " + n );
+		}
+	</script>
+</head>
+<body>
+	<header><h3>Eventos</h3></header>
+	<form>
+		<input type="text" id="nombre" placeholder="Nombre">
+		<button type="button" onclick="saludo()">Aceptar</button>
+	</form>
+	<footer>Ana López</footer>
+</body>
+</html>

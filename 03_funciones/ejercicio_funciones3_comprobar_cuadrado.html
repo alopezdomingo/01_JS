@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO FUNCIONES 3</title>
+	<script type="text/javascript">
+		pedirLado(){
+			var n = parseFloat(prompt("Introduce el lado del cuadrado"));
+			return n;
+		}
+		comprobarLado(a,b,c,d){
+			if (a==b && b==c){
+				document.write("ES CUADRADO");
+			}else{
+				document.write("<b>NO</b> ES CUADRADO");
+			}
+		}
+		//
+		var l1 = pedirLado();
+		var l2 = pedirLado();
+		var l3 = pedirLado();
+		var l4 = pedirLado();
+		//
+		comprobarLado(l1,l2,l3,l4);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

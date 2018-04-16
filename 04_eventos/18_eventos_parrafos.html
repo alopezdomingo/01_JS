@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19. Eventos | Cambios</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var clicks =0;
+		var clicks2 =0;
+		/*********************/
+		function contadorClicks() {
+		        clicks += 1;
+		        document.getElementById("clicks").innerHTML ="Has pulsado "+ clicks + " veces.";
+		        if (clicks==10){
+		        	cambiarP1();
+		        }else{ }
+    	};
+    	/*******************/
+    	function contadorClicks2() {
+		        clicks2 += 1;
+		        document.getElementById("clicks2").innerHTML ="Has pulsado "+ clicks2 + " veces.";
+		        if (clicks2==10){
+		        	cambiarP2();
+		        }else{ }
+    	};
+    	/**********************/
+		function cambiarP1() {
+			document.getElementById('p1').className="parrafoA";
+		}
+		function cambiarP2() {
+			document.getElementById('p2').className="parrafoB";
+		}
+		function reset(){
+			document.getElementById('p1').className="reset";
+			document.getElementById('p2').className="reset";
+
+		}
+	</script>
+	<style type="text/css">
+		.parrafoA{
+			background-color: #F3EFEE;
+			color: #5A617B;
+			border: 1px solid black;
+			text-align: justify;
+			font-family: 'Arial';
+			margin: 5%;
+			padding: 1%;  
+		}
+		.parrafoB{
+			background-color: #000;
+			color: #fff;
+			border: 5px solid pink;
+			text-align: justify;
+			font-family: 'Arial';  
+			margin: 5%;
+			padding: 1%;
+		}
+		.reset{
+
+		}
+	</style>
+</head>
+<body>
+		<header><h2>Cambio de párrafos</h2></header>
+		<p>Pulsa 10 veces sobre el botón para cambiar el aspecto del párrafo.</p>
+		<p id="p1" class="parrafos">Lorem fistrum no te digo trigo por no llamarte Rodrigor quietooor no puedor condemor. A wan torpedo papaar papaar papaar papaar tiene musho peligro. Caballo blanco caballo negroorl torpedo me cago en tus muelas jarl no te digo trigo por no llamarte Rodrigor. Está la cosa muy malar diodenoo al ataquerl mamaar por la gloria de mi madre condemor te va a hasé pupitaa no te digo trigo por no llamarte Rodrigor se calle ustée. Pupita condemor mamaar condemor ahorarr ese pedazo de a gramenawer. </p>
+		<center>
+			<button onclick="contadorClicks()">Cambiar 1 </button>
+			<p id="clicks">Mostrar número de Clicks</p>
+		</center>
+		<hr>
+		<p id="p2" class="parrafos">La caidita de la pradera a wan por la gloria de mi madre. Qué dise usteer ese pedazo de jarl la caidita a peich. Ahorarr a peich va usté muy cargadoo apetecan jarl mamaar jarl te voy a borrar el cerito. Ese que llega jarl por la gloria de mi madre sexuarl está la cosa muy malar. Ese que llega pecador pupita a gramenawer condemor pupita te va a hasé pupitaa por la gloria de mi madre.</p>
+		<center>
+			<button onclick="contadorClicks2()">Cambiar 2</button>
+			<p id="clicks2">Mostrar número de Clicks</p><hr>
+		</center>
+		<center><button onclick="reset()">RESET</button></center>
+		
+	<footer>Ana López</footer>	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EVENTOS innerHTML una funcion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		//En tres recuadro
+		
+		function mostrarTextoA(elemento) {
+			document.getElementById("demo").innerHTML=elemento.value;
+		}
+	
+	</script>
+</head>
+<body>
+	<header><h2>Lector</h2></header>
+	<center>
+		<input type="text" id="p1" onkeydown="mostrarTextoA(this)" name="">
+		<input type="text" id="p2" oninput="mostrarTextoA(this)" name="">
+		<input type="text" id="p3" onkeyup="mostrarTextoA(this)" name="">
+		<p id="demo"><--&#10048; Aquí está el párrafo del resultado &#10048;--></p>
+	</center>
+	<footer>Ana López</footer>
+</body>
+</html>

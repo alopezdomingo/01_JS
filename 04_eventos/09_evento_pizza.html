@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EVENTOS PIZZA</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+		function calcPrecioMasa(){
+			var tipoM= document.getElementById('masa').selectedIndex;
+			var masaF=document.getElementById('masa').options[tipoM].text;
+			var precioM = document.getElementById('masa').options[tipoM].value;
+			
+			document.getElementById('eleccionM').value=masaF;
+			document.getElementById('precioF').value=precioM;
+		}
+		
+	</script>
+</head>
+<body>
+	<header><h3>PIZZA</h3></header>
+<!------------------------>
+	<h3>Selecciona una masa:</h3>
+	<form>
+		<select id="masa" onchange="calcPrecioMasa()">
+			<option value="6">Clásica</option>
+			<option value="7">Extrafina</option>
+			<option value="8">Rústica</option>
+		</select>
+		<hr>
+		<table>
+			<tr>
+				<td>Ha elegido la masa: </td>
+				<td><input type="text" id="eleccionM" readonly></td>
+			</tr>
+			<tr>
+				<td>El precio final es: </td>
+				<td><input type="text" id="precioF" readonly> &nbsp;€</td>
+			</tr>
+		</table>
+	</form>
+<!------------------------>
+	<footer>Ana López</footer>
+</body>
+</html>

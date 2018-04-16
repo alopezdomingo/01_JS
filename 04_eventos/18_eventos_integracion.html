@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>19. Eventos|</title>
+	<script type="text/javascript">
+		function error(){
+			document.getElementById('p2').className="error";
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.parrafos{
+			color:blue;
+			font-size: 14px;
+		}
+		.error{
+			color: white;
+			background-color: red; 
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header><h2>Aumentar tamaño / color</h2></header>
+		<p id="p1" class="parrafos">Texto 1</p>
+		<p id="p2" class="parrafos">Texto 2</p>
+		<p id="p3" class="parrafos">Texto 3</p>
+		<center><button onclick="error()">Mal párrafo2</button></center>
+	<footer>Ana López</footer>	
+</body>
+</html>

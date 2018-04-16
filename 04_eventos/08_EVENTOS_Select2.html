@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+	<meta charset="UTF-8">
+	<title>08 EVENTOS SELECT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript"> 
+		/****
+		EL PRIMER VALOR DEL SELECT ES UN ÍNDICE, OCUPA EL LUGAR 0
+		TEXT:Texto visible de opción
+		VALUE: Valor que tiene la opcion
+		ON CHANGE:
+		***/
+	function verProvincia(){
+		var indice = document.getElementById('provincia').selectedIndex;
+			//alert("Mostrar el índice --> "+ indice);
+		var texto = document.getElementById('provincia').options[indice].text;
+			//alert("Muestra el texto ---> " + texto);
+		var valor = document.getElementById('provincia').options[indice].value;
+			//alert("Muestra el value ---> " + valor);
+			document.getElementById('i').value=indice;
+			document.getElementById('t').value=texto;
+			document.getElementById('v').value=valor;
+	}
+
+	</script>
+</head>
+<body>
+	<header><h3>Eventos Select</h3></header>
+<!------------------------>
+	<h3>Selecciona una opción:</h3>
+	<form>
+		<select id="provincia" onchange="verProvincia();">
+			<option value="AB">Albacete</option>
+			<option value="CR">Ciudad Real</option>
+			<option value="GU">Guadalajara</option>
+			<option value="CU">Cuenca</option>
+			<option value="TO">Toledo</option>
+		</select>
+		<br>
+		<button type="button" onclick="verProvincia();">Aceptar</button>
+		<hr>
+		<table>
+			<tr>
+				<td>Indice</td>
+				<td><input type="text" id="i"  readonly></td>
+			</tr>
+			<tr>
+				<td>Texto</td>
+				<td><input type="text" id="t" readonly></td>
+			</tr>
+			<tr>
+				<td>Valor</td>
+				<td><input type="text" id="v" readonly></td>
+			</tr>
+		</table>
+
+
+	</form>
+<!------------------------>
+	<footer>Ana López</footer>
+</body>
+</html>

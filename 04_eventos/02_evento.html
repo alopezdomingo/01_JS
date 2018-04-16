@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<title>02_evento</title>
+		<script type="text/javascript">
+			//preguntar nombre usuario
+			//Si es juan --> hola juan
+			//Si no es juan --> no puedes entrar
+			function saludo(){
+			var valid = 'Juan';	
+			var n = document.getElementById('nombre').value;
+			if (n==valid){
+				alert("Bienvenido/a " + n +" /JOSE");
+			}else{
+				alert("&#x2620; No puedes entrar");
+			}
+			
+		}
+		</script>
+	</head>
+	<body>
+		<header><h3>Eventos</h3></header>
+	<form>
+		<input type="text" id="nombre" placeholder="Nombre">
+		<button type="button" onclick="saludo()">Aceptar</button>
+	</form>
+	<footer>Ana López</footer>
+	</body>
+	</html>	

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		/**
+		Dos cuadros de texto y 4 botones
+		dos para ingresar dos numeros diferente
+		los botones realizan operaciones -+*div
+		**/
+		function suma(n1,n2) {
+			var a = parseFloat(document.getElementById('num1').value);
+			var b = parseFloat(document.getElementById('num2').value);
+			var sum = a+b;
+			alert("El resultado es ---> " + sum );
+		}
+		function resta(n1,n2) {
+			var a = parseFloat(document.getElementById('num1').value);
+			var b = parseFloat(document.getElementById('num2').value);
+			var res = a-b;
+			alert("El resultado es ---> " + res);
+		}
+		function multi(n1,n2) {
+			var a = parseFloat(document.getElementById('num1').value);
+			var b = parseFloat(document.getElementById('num2').value);
+			var mul = a*b;
+			alert("El resultado es ---> " + mul);
+		}
+		function divi(n1,n2) {
+			var a = parseFloat(document.getElementById('num1').value);
+			var b = parseFloat(document.getElementById('num2').value);
+			var div = a/b;
+			alert("El resultado es ---> " + div);
+		}
+	</script>
+</head>
+<body>
+	<header><h3>Eventos</h3></header>
+	<form>
+		<input type="text" id="num1" placeholder="Primer valor"><br>
+		<input type="text" id="num2" placeholder="Segundo valor"><br>
+		<button type="button" onclick="suma()">Suma</button><br>
+		<button type="button" onclick="resta()">Resta</button><br>
+		<button type="button" onclick="multi()">Multiplicación</button><br>
+		<button type="button" onclick="divi()">División</button><br>
+	</form>
+	<footer>Ana López</footer>
+</body>
+</html>

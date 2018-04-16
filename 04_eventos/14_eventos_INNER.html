@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PASSWORD</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		/*
+		usuario
+		pass
+		confirm
+		cartelitos
+		*/
+		function verNombre(){
+			var nombreUsu = document.getElementById('nombre').value;
+			document.getElementById("demo").innerHTML= "<p>¡Hola! </p>" + nombreUsu;
+			if (nombreUsu==" ") {
+				document.getElementById("demo").innerHTML= "<p style='color:red; font-size:25px;'>INTRODUCE NOMBRE DE USUARIO</p>"
+			}
+		}
+		
+		function comprobarPass(){
+			var pass1 = document.getElementById('passA').value;
+			var pass2 =document.getElementById('passB').value;
+			if (pass1==pass2){
+				document.getElementById("demo2").innerHTML= "<p style='color:green; font-size:25px;'> &#9989; Correcto</p>";
+			}else{
+				document.getElementById("demo2").innerHTML= "<p style='color:red; font-size:25px;'> &#10060; INCORRECTO</p>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<header><h2>Comprobar Password</h2></header>
+		<p>Nombre: <input type="text" id="nombre" oninput="verNombre()" name=""></p>
+		<p>Contraseña: <input type="password" id="passA"  name=""></p>
+		<p>Confirma contraseña: <input type="password" id="passB" oninput="comprobarPass()" name=""></p>
+		<hr>
+		<center>
+		<p id="demo">Introduce nombre de usuario.</p>
+		<p id="demo2"></p>
+	</center>
+	<footer>Ana López</footer>	
+</body>
+</html>

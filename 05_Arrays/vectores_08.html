@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vectores | Búsqueda secuencial</title>
+	<script type="text/javascript">
+		/***
+		Diseñe un algoritmo que lea un num y lo busque en un vector creado anteriormente de 80 elementos. Escribir si el usuario lo encuentra*****/
+		var numPremiados = new Array(5);
+		var esta=0;
+		for (var i = 0; i < numPremiados.length; i++) {
+			numPremiados[i]=parseInt(Math.random()*5);
+		}
+		var numUsuario = prompt("Adivina el número");
+		for (var i = 0; i < numPremiados.length; i++) {
+			if (numUsuario==numPremiados[i]){
+				i=numPremiados.length;
+				esta=1;
+			}
+		}
+		if(esta==0 ){
+			document.write("<p style='font-size:25px;'> &#9785 Lo sentimos, los números premiados son:</p> <br>");
+		}
+		else
+		{
+			document.write("<p style='font-size:25px;'>&#9786 Enhorabuena</p>");
+		}
+		/*****NUM USUARIO Y NUMEROS PREMIADOS*****/
+		document.write("<p style='color:red;'>Tu número ["+ numUsuario +"] </p>" );
+		for (var i = 0; i < numPremiados.length; i++) {
+			document.write(numPremiados[i]+"<br>");
+		}
+		
+			
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

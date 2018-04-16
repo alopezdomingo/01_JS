@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multator 2000 | version MARTIN</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			var indice;
+		var indice2;
+			function leerMulta()
+			{
+				indice=document.getElementById("cmbMulta").selectedIndex;
+				var tipoMulta=document.getElementById("cmbMulta").options[indice].text;
+				document.getElementById("pMulta").innerHTML=tipoMulta;
+			}
+			function leerProvincia()
+			{
+				indice2=document.getElementById("cmbProvincia").selectedIndex;
+				var provincia=document.getElementById("cmbProvincia").options[indice2].text;
+				document.getElementById("pProvincia").innerHTML=provincia;
+			}
+			function calcularMulta()
+			{
+				leerMulta();
+				leerProvincia();
+				var importe;
+				switch (indice2)
+				{
+					case 0:
+						if(indice == 0)
+						{
+							importe=100;
+						}
+						else if(indice == 1)
+						{
+							importe=200;
+						}
+						else
+						{
+							importe=350;
+						}	
+					break;
+					case 1:
+						if(indice == 0)
+						{
+							importe=120;
+						}
+						else if(indice == 1)
+						{
+							importe=250;
+						}
+						else
+						{
+							importe=420;
+						}	
+					break;
+				}
+				document.getElementById("pImporte").innerHTML=importe;
+			}
+		</script>
+	</head>
+	<body>
+		<header><h2>&#10024;&#10024; MULTATOR 2000 &#10024;&#10024;</h2></header>
+		<form>
+		<h3>Multa</h3>
+			<select id="cmbMulta">
+				<option>Tránsito y vehículos</option>
+				<option>Sanidad</option>
+				<option>Amenazas y seguridad</option>
+			</select>
+			<br><br>
+		<h3>Provincia</h3>
+			<select id="cmbProvincia">
+				<option>Albacete</option>
+				<option>Toledo</option>
+			</select>
+			<br><br>
+			<button type="button" onclick="calcularMulta()">Ver</button>
+			<p id="pMulta"></p>
+			<p id="pProvincia"></p>
+			<p id="pImporte"></p>
+		</form>
+		<footer>Ana López</footer>
+	</body>
+</html>

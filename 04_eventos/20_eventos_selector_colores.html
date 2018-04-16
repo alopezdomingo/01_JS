@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>20.Eventos selector colores</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.inicio{
+			padding: 25px;
+			margin: 25px;
+		}
+		.case0{
+			padding: 25px;
+			margin: 25px;
+			background-color: #91C6B6;
+		}
+		.case1{
+			padding: 25px;
+			margin: 25px;
+			background-color: #CC306E;
+		}
+		.case2{
+			padding: 25px;
+			margin: 25px;
+			background-color: #323C3D;
+		}
+		.case3{
+			padding: 25px;
+			margin: 25px;
+			background-color: #217B8E;
+		}
+		.case4{
+			padding: 25px;
+			margin: 25px;
+			background-color: #61ACBC;
+		}
+		.case5{
+			padding: 25px;
+			margin: 25px;
+			background-color: #D7DEE8;
+		}
+	</style>
+	<script type="text/javascript">
+		function cambiarColor(){
+		var leerColores = document.getElementById('colores').selectedIndex;
+		var verColor=document.getElementById('colores').options[leerColores].text;
+		document.getElementById("demo").innerHTML='<p>Has seleccionado: </p><br>' + '<b>' + verColor + '</b>';
+		switch (leerColores){
+			case 0:
+			document.getElementById('inicio').className="case0";
+			break;
+			case 1:
+			document.getElementById('inicio').className="case1";
+			break;
+			case 2:
+			document.getElementById('inicio').className="case2";
+			break;
+			case 3:
+			document.getElementById('inicio').className="case3";
+			break;
+			case 4:
+			document.getElementById('inicio').className="case4";
+			break;
+			case 5:
+			document.getElementById('inicio').className="case5";
+			break;
+		}
+		//switch para cambiar fondo
+		//document.getElementById('inicio').className="case0";
+
+	}
+	</script>
+</head>
+<body>
+	<header><h2>Cambio de fondo</h2></header>
+		<center>
+			<select id="colores" onchange="cambiarColor()">
+				<option>#91C6B6</option>
+				<option>#CC306E</option>
+				<option>#323C3D</option>
+				<option>#217B8E</option>
+				<option>#61ACBC</option>
+				<option>#D7DEE8</option>
+			</select>
+			<div class="inicio" id="inicio"><p id="demo"></p></div>
+		</center>
+	<footer>Ana López</footer>	
+</body>
+</html>

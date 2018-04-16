@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Presupuestator 2000 / Ana López</title>
+		<meta charset="utf-8">
+			<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function calcularPresupuesto()
+			{
+				var precioTotal=0;
+				var indice=document.getElementById("cmbProcesador").selectedIndex;
+				precioTotal=precioTotal + parseFloat(document.getElementById("cmbProcesador").options[indice].value);
+				indice=document.getElementById("cmbHdd").selectedIndex;
+				precioTotal=precioTotal + parseFloat(document.getElementById("cmbHdd").options[indice].value);
+				if (document.getElementById("chkMontaje").checked)
+				{
+					 precioTotal=precioTotal + parseFloat(document.getElementById("chkMontaje").value);
+				}
+				if (document.getElementById("chkAntivirus").checked)
+				{
+					 precioTotal=precioTotal + parseFloat(document.getElementById("chkAntivirus").value);
+				}
+				if (document.getElementById("chkMantenimiento").checked)
+				{
+					 precioTotal=precioTotal + parseFloat(document.getElementById("chkMantenimiento").value);
+				}
+				if (document.getElementById("radioDomicilio").checked)
+				{
+					precioTotal=precioTotal + parseFloat(document.getElementById("radioDomicilio").value);
+				}
+				document.getElementById("txtTotal").value=precioTotal;
+				document.getElementById("pNombre").innerHTML="Nombre: " + document.getElementById("txtNombre").value;
+				document.getElementById("pApellidos").innerHTML="Apellidos: " + document.getElementById("txtApellidos").value;
+			}
+		</script>
+	</head>
+	<body>
+		<header><h1>Realiza tu presupuesto</h1></header>
+		<div class="sep5">
+		<form>
+			<h2>Procesador</h2>
+				<select id="cmbProcesador">
+					<option value="100">i3</option>
+					<option value="150">i5</option>
+					<option value="200">i7</option>
+				</select>
+			<h2>Disco duro</h2>
+				<select id="cmbHdd">
+					<option value="120">4tb</option>
+					<option value="60">1tb</option>
+					<option value="50">500gb</option>
+				</select>
+			<h2>Extras</h2>
+				<input type="checkbox" id="chkMontaje" value="30">Montaje<br>
+				<input type="checkbox" id="chkAntivirus" value="35">Antivirus<br>
+				<input type="checkbox" id="chkMantenimiento" value="100">Mantenimiento<br>
+			<h2>Datos Personales</h2>
+				<input type="text" id="txtNombre"><br>
+				<input type="text" id="txtApellidos"><br>
+			<h2>Selecciona</h2>
+				<input type="radio" id="radioRecogida" name="radioEnvio">Recogida
+				<input type="radio" id="radioDomicilio" name="radioEnvio" value="10">Envío
+			<br><br>
+			</form>
+		</div>
+		<div class="sep5">
+			<hr>
+				<center><button type="button" onclick="calcularPresupuesto()">CALCULAR</button></center><br>
+			<hr>
+				Presupuesto <input type="text" id="txtTotal" readonly>
+				<p id="pNombre">Nombre: </p>
+				<p id="pApellidos">Apellidos: </p>
+				&nbsp;<br><br>
+				<hr>
+				<p id="mostrarProc"></p>
+				<p id="mostrarDisc"></p>
+				
+		</div>
+		<footer>Ana López</footer>
+	</body>
+</html>

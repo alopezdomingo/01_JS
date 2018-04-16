@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FUNCIONES suma</title>
+	<style type="text/css">
+		body{text-align: center; font-size: 22px;}
+	</style>
+	<script type="text/javascript">
+		//
+		/****
+		pasaje de parámetros
+		en este caso var x, var y, el parámetro de la función es una copia del parámetro que se le envía; en este caso (n1 x)
+		VARIABLES LOCALES: son accesibles desde la función donde se declaran (x,y,r solo existen dentro de la función)
+		VARIABLES GLOBALES: son accesibles desde todo el programa
+		*****/
+		function calculoSuma (x, y){
+			var r = x + y;
+			document.write("El resultado de la suma es: " + r);
+		} 
+		var n1 = parseFloat(prompt("Ingrese un número"));
+		var n2 = parseFloat(prompt("Ingrese otro número"));
+		calculoSuma(n1,n2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

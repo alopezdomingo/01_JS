@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>18. Cambiar tamaño/color</title>
+	<script type="text/javascript">
+		
+		var fontSize = 16;
+		var trans= 0.5;
+        // funcion para aumentar la fuente
+        function zoomIn() {
+            fontSize += 1;
+            document.getElementById('demo').style.fontSize = fontSize + "px";
+           // document.body.style.fontSize = fontSize + "em";
+        }
+      // funcion para disminuir la fuente
+        function zoomOut() {
+            fontSize -= 1;
+           document.getElementById('demo').style.fontSize = fontSize + "px";
+        }
+        
+        //incrementar transparencia
+        function inTrans(){
+        	trans += 0.1;
+        	document.getElementById('demo').style.color="rgba(0,0,0,"+trans+")"; 
+        }
+        function deTrans(){
+        	trans -= 0.1;
+        	document.getElementById('demo').style.color="rgba(0,0,0,"+trans+")"; 
+        	//document.getElementById('demo').style.opacity="20"; 
+        }
+
+	</script>
+</head>
+<body>
+	<header><h2>Aumentar tamaño / color</h2></header>
+	<center>
+		<p id="demo">Lorem fistrum no te digo trigo por no llamarte Rodrigor se calle ustée amatomaa diodenoo hasta luego Lucas no puedor. Amatomaa sexuarl fistro fistro condemor ese que llega fistro llevame al sircoo me cago en tus muelas jarl amatomaa. Me cago en tus muelas jarl condemor qué dise usteer caballo blanco caballo negroorl. No puedor no puedor por la gloria de mi madre va usté muy cargadoo. Apetecan a gramenawer torpedo de la pradera ese pedazo de te va a hasé pupitaa está la cosa muy malar fistro mamaar. No puedor fistro sexuarl no te digo trigo por no llamarte Rodrigor mamaar fistro se calle ustée a gramenawer pupita benemeritaar. Al ataquerl torpedo va usté muy cargadoo pecador sexuarl condemor sexuarl. </p>
+		<hr><br>
+		<h3>Tamaño</h3>
+		<button onclick="zoomOut()">-</button><button onclick="zoomIn()">+</button>
+		<hr><br>
+		<h3>Color</h3>
+		<button onclick="deTrans()">-</button><button onclick="inTrans()">+</button>
+	</center>
+	<footer>Ana López</footer>	
+</body>
+</html>

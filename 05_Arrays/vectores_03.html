@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+	<meta charset="UTF-8">
+	<title>VECTORES 03</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		//
+		var vectorA = new Array(45);
+		var vectorB = new Array(45);
+		var vectorC = new Array();
+
+		for (var i = 0; i < vectorA.length; i++) {
+			vectorA[i]=parseInt(Math.random()*45)
+		}
+		for (var i = 0; i < vectorB.length; i++) {
+			vectorB[i]=parseInt(Math.random()*45)
+		}
+
+		document.write(vectorA);
+		document.write("<br>");
+		document.write(vectorB);
+		document.write("<hr>");
+
+		for (var i = 0; i < vectorA.length; i++) {
+			vectorC[i]= vectorA[i]+vectorB[i]
+		}
+		document.write("<b>"+vectorC+"</b>");
+	</script>
+</head>
+<body>
+	<center></center>
+</body>
+</html>

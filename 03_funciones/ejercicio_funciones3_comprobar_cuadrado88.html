@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cuadrado</title>
+	<script type="text/javascript">
+		function pedirLado (){
+			var l = parseFloat(prompt("Introduce un lado cuadrado"));
+			return l;
+		}
+		function verCuadrado(l1,l2,l3,l4){
+			if(l1==l2){
+				if (l2==l3){
+					if (l3==l4){
+						document.write("Es un cuadrado &#9632;")
+					}else document.write("no es un cuadrado :(");
+				}else document.write("no es un cuadrado :(");
+			}else document.write("no es un cuadrado :(");
+		}
+		
+		var l1 = pedirLado();
+		var l2 = pedirLado();
+		var l3 = pedirLado();
+		var l4 = pedirLado();
+		//
+		
+		verCuadrado(l1,l2,l3,l4);
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

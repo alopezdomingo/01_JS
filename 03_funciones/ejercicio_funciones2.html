@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO FUNCIONES</title>
+	<style type="text/css">
+		body{font-size: 22px;}
+	</style>
+	<script type="text/javascript">
+		function calculoSuma (x,y){
+			var r = x + y;
+			document.write("El resultado de la suma es: " + r +"<br>");			
+		}
+		function calculoResta (x,y){
+			var r = x - y;
+			document.write("El resultado de la resta es: " + r +"<br>");			
+		}
+		function calculoMulti (x,y){
+			var r = x * y;
+			document.write("El resultado de la multiplicación es: " + r +"<br>");			
+		}
+		function calculoDivi (x,y){
+			var r = x / y;
+			document.write("El resultado de la división es: " + r +"<br>");			
+		}
+		function pedirNumero (){
+			var n = parseFloat(prompt("Introduce un número"));
+			return n;
+		}
+		/******************/
+		var n1 = pedirNumero();
+		var n2 = pedirNumero();
+		/******************/
+		calculoSuma(n1,n2);
+		calculoResta(n1,n2);
+		calculoDivi(n1,n2);
+		calculoMulti(n1,n2);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

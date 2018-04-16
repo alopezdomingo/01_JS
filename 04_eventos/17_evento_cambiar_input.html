@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>17. Integración CSS | JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		/*****Cuadro de texto con botón, si el cuadro está vacío, debe tener fondo rojo*****/
+		function cambiar(){
+			if(document.getElementById('inputCambiante').value==""){
+				document.getElementById('inputCambiante').style.backgroundColor="red";
+				document.getElementById("demo").innerHTML="Introduce nombre de usuario";
+			}else{
+				document.getElementById('inputCambiante').style.backgroundColor="green";
+				document.getElementById("demo").innerHTML="Gracias por introducir nombre de usuario";
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<header><h2>Comprobar Password</h2></header>
+	<input oninput="cambiar()" placeholder="Escribe algo aquí" type="text" id="inputCambiante" >
+	<p id="demo">Introduce tu nombre de usuario.</p>
+	<footer>Ana López</footer>	
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO EXTRA</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function verNombre() {
+			document.getElementById("verN").value=document.getElementById("nombre").value;
+		}
+		function verA1(){
+			document.getElementById("verA1").value=document.getElementById("apellido1").value;
+		}
+		function verA2() {
+			document.getElementById("verA2").value=document.getElementById("apellido2").value;
+		}
+		function verP(){
+			//document.getElementById("verProc").value=document.getElementById("procesador").value;
+			var inPro= document.getElementById('procesador').selectedIndex;
+			var selPro=document.getElementById('procesador').options[inPro].text;
+
+			document.getElementById('verProc').value=selPro;
+
+			var precioP;
+			switch (inPro){
+				case 0:
+				precioP = 400;
+				case 1:
+				precioP = 500;
+				case 3:
+				precioP = 600;
+				case 4:
+				precioP = 700;
+			}
+			document.getElementById('verPrePro').value=precioP
+			
+		}
+		function verD (){
+			//document.getElementById("verDisc").value=document.getElementById("discoD").value;
+			var inDisc= document.getElementById('discoD').selectedIndex;
+			var selDisc=document.getElementById('discoD').options[inDisc].text;
+
+			document.getElementById('verDisc').value=selDisc;
+
+			var precio;
+			switch (inDisc){
+				case 0:
+				precio = 100;
+				case 1:
+				precio = 200;
+				case 3:
+				precio = 300;
+			}
+			document.getElementById('verPreDis').value=precio
+		}
+
+		function sumaTotal(){
+			var precioTotal = parseFloat(precio+precioP);
+			document.getElementById('verTotal').value=precioTotal;
+		}
+
+	</script>
+</head>
+<body>
+
+	<header><h3>Selecciona tu ordenador</h3></header>
+<!------------------------>
+	<div class="sep5">
+				<h3>Guarda tu nombre de cliente:</h3>
+			<input type="text" name="nombre" id="nombre" placeholder="Nombre" onkeyup="verNombre()">
+			<input type="text" name="apellido1" id="apellido1" oninput="verA1()" placeholder="Primer apellido">
+			<input type="text" name="apellido2" id="apellido2" oninput="verA2()" placeholder="Segundo apellido">
+			<h3>Selecciona un procesador:</h3>
+				<select id="procesador" onchange="verP()">
+					<option value="i7">Intel i7</option>
+					<option value="i8">Intel i8</option>
+					<option value="i9">Intel i9</option>
+				</select>
+			<h3>Selecciona un disco duro:</h3>
+			<select id="discoD" onchange="verD(), sumaTotal()" >
+					<option value="a1">Asus 1Tb</option>
+					<option value="a2">Asus 500Gb + 500Gb DDR</option>
+					<option value="a3">Asus 1Tb DDR</option>
+				</select>
+	</div>
+
+	<div class="sep5">
+		<br>
+		<table>
+			<tr>
+				<td>¡Hola!</td>
+				<td><input type="text" id="verN" readonly></td>
+				<td><input type="text" id="verA1" readonly></td>
+				<td><input type="text" id="verA2" readonly></td>
+			</tr>
+		</table><br>
+		<hr><br>
+		<table>
+			<tr>
+				<td>&nbsp;</td>
+				<th>Procesador</th>
+				<th>Disco duro</th>
+			</tr>
+			<tr>
+				<td>Has seleccionado:</td>
+				<td><input type="text" id="verProc" readonly></td>
+				<td><input type="text" id="verDisc" readonly></td>
+			</tr>
+			<tr>
+				<td>Precio:</td>
+				<td><input type="text" id="verPrePro" readonly></td>
+				<td><input type="text" id="verPreDis" readonly></td>
+			</tr>
+		</table>
+		<br><hr><br>
+		<table>
+			<tr>
+				<th style="width: 50%">TOTAL</th>
+				<td><input type="text" id="verTotal" readonly></td>
+			</tr>
+		</table>
+	</div>
+	
+<!------------------------>
+	<footer>Ana López</footer>
+</body>
+</html>

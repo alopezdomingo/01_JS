@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>VECTORES 06</title>
+	<script type="text/javascript">
+		var vector150 = new Array(150);
+		for (var i = 0; i < vector150.length; i++) {
+			vector150[i]=parseInt(Math.random()*500);
+		}
+		for (var i = 0; i < vector150.length; i++) {
+			document.write([1+i]+"----> "+vector150[i]+"<br>")
+		}
+		document.write("<hr>")
+		var vectorInvertido = new Array();
+		for (var i = 0; i < vector150.length; i++) {
+			vectorInvertido[i]=vector150[vector150.length-1-i];
+			//document.write([1+i]+"----> "+vector150[vector150.length-1-i]+"<br>")
+			document.write([1+i]+" INVERSO --> "+vectorInvertido[i]+"<br>");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

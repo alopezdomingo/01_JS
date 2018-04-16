@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>ARRAYS</title>
+	<script type="text/javascript">
+		var notas = new Array(5);
+		/**********
+		ARRAY PARA GUARDAR LAS VENTAS MENSUALES DE UN VENDEDOR, Y LUEGO MOSTRARLA
+		notas[0]=5;
+		notas[1]=8;
+		notas[2]=4;
+		notas[3]=1;
+		notas[4]=9;
+		document.write("La nota 4 es: "+ notas[3]);              
+		***/
+		var ventas = new Array(12);
+		var mes =new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+		for (var i = 0; i < ventas.length; i++) {
+			ventas[i]=prompt("Introduce las ventas de " +"<b>"+ mes[i]+"<b>")
+		}
+		for (var i = 0; i < ventas.length; i++) {
+			document.write("Las ventas del mes "+[i+1]+" han sido -------> " + ventas[i]+ "<br>")
+		}
+
+	</script>
+</head>
+<body>
+	<!------------
+	<header><h2>ARRAYS</h2></header>
+
+	<footer>Ana López</footer>	------------>
+</body>
+</html>

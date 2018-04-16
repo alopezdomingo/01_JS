@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>13. EVENTOS Calcular Multa</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		/*
+		*
+		*/
+		var totalMulta = 0;
+		function calculoMultas(){
+			var leerM= document.getElementById('sMultas').selectedIndex;
+			var verF=document.getElementById('sMultas').options[leerM].text;
+			document.getElementById("demo").innerHTML='<p>Tipo multa:</p>' + '<b>' + verF + '</b>';
+			/**********/
+			var leerP =document.getElementById('provincia').selectedIndex;
+			var verP = document.getElementById('provincia').options[leerP].text;
+			document.getElementById("demoR").innerHTML='<p>Tu provincia:</p>' + '<b>' + verP + '</b>';
+			/**********/
+			if (verP=="Albacete")/*BUCLE DE ALBACETE*/{
+				if (verF=="Tránsito y vehículos"){
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">100 €</p>';
+				}if (verF=="Sanidad"){
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">200 €</p>';
+				}if (verF=="Seguridad"){
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">250 €</p>';
+				}
+				
+			}
+			else{
+				if (verF=="Tránsito y vehículos")/*BUCLE DE TOLEDO*/{
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">120 €</p>';
+				}if (verF=="Sanidad"){
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">250 €</p>';
+				}if (verF=="Seguridad"){
+					document.getElementById("demoP").innerHTML='<p style="font-size:25px;color:red">420 €</p>';
+				}
+		}
+	}
+	</script>
+</head>
+<body>
+	<header><h2>Multas</h2></header>
+		<div class="sep5">
+			<select id="sMultas" onchange="calculoMultas()">
+				<option>Tránsito y vehículos</option>
+				<option>Sanidad</option>
+				<option>Seguridad</option>
+			</select>
+			<select id="provincia" onchange="calculoMultas()">
+				<option>Albacete</option>
+				<option>Toledo</option>
+			</select>
+		</div>
+		<div class="sep5">
+			<p id="demo">Tipo de multa:</p>
+			<p id="demoR">Tu provincia:</p>
+			<p id="demoP">Precio:</p>
+		</div>
+	<footer>Ana López</footer>
+</body>
+</html>
