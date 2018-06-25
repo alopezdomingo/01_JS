@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de botones</title>
+	<style type="text/css">
+		button{
+			font-size: 18px;
+		}
+	</style>
+	<script type="text/javascript">	
+		function inicio(){
+			//definimos variables
+			var b1 = document.getElementById('boton1');
+			var b2 = document.getElementById('boton2');
+			var b3 = document.getElementById('boton3');
+
+			b1.addEventListener('click', modificar, false);
+			b2.addEventListener('click', modificar2, false);
+			b3.addEventListener('click', modificar3, false);
+		}
+		function modificar(event){
+			event.target.style.backgroundColor="red";
+		}
+		function modificar2(event){
+			event.target.style.backgroundColor="powderblue";
+		}
+		function modificar3(event){
+			event.target.style.backgroundColor="pink";
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		addEventListener('load', inicio, false);
+	</script>
+	<center>
+		<button id="boton1">Botón 1</button>
+		<button id="boton2">Botón 2</button>
+		<button id="boton3">Botón 3</button>
+	</center>
+</body>
+</html>

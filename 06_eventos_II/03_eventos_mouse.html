@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PRUEBA TARGET</title>
+	<script type="text/javascript">
+		function inicio(){
+			document.getElementById('p1').addEventListener('mouseover', modificar, false);
+			document.getElementById('p1').addEventListener('mouseout', modificar3, false);
+			
+			document.getElementById('p2').addEventListener('mouseover', modificar2, false);
+			document.getElementById('p2').addEventListener('mouseout', modificar4, false);
+			
+			document.getElementById('p1').addEventListener('mousedown', clickEncima, false)
+			document.getElementById('p1').addEventListener('mouseup', dejarClickEncima, false)
+		}
+
+		function modificar(event){
+			event.target.style.backgroundColor="red";
+		}
+		function modificar2(event){
+			event.target.style.backgroundColor="blue";
+		}
+		function modificar3(){
+			document.getElementById('p1').style.backgroundColor="#728694";
+		}
+		function modificar4(){
+			document.getElementById('p2').style.backgroundColor="#81A4B3";
+		}
+		function clickEncima(){
+			document.getElementById('p1').innerHTML='&#10062; &#10062; &#10062; Deja ya de pinchar  &#10062; &#10062; &#10062;';
+		}
+		function dejarClickEncima(){
+			document.getElementById('p1').innerHTML='&#10024; &#10024; &#10024; Al fin... &#10024; &#10024; &#10024;';
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		addEventListener('load', inicio, false);
+	</script>
+	<center>
+		<p style="background-color: #728694; color: white; padding: 40px;" id="p1">&#9889; &#9889; &#9889; &#9889; &#9889; &#9889; Párrafo 1 &#9889; &#9889; &#9889; &#9889; &#9889; &#9889;</p>
+		<br>
+		<p style="background-color: #81A4B3; color: white; padding: 40px;" id="p2">&#9889; &#9889; &#9889; &#9889; &#9889; &#9889; Párrafo 2 &#9889; &#9889; &#9889; &#9889; &#9889; &#9889;</p>
+	</center>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos Key</title>
+	<script type="text/javascript">
+		function inicio(){
+			document.getElementById('texto').addEventListener('keyup', mostrar, false)
+		}
+		function mostrar(event){
+			document.getElementById('parrafo').innerHTML="Has escrito: "+ document.getElementById('texto').value;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		addEventListener('load', inicio, false);
+	</script>
+	<center>
+		<br>
+		<h2>Reproductor de texto</h2>
+		<input type="text" id="texto" name="" size="80"><br>
+		<p id="parrafo">Has escrito:</p>
+	</center>
+</body>
+</html>

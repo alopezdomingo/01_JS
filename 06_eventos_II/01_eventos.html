@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modelo de eventos en JavaScript</title>
+	<script type="text/javascript">
+		function inicio(){
+			document.getElementById('par1').addEventListener('click', cambiarTexto, false);
+			document.getElementById('par1').addEventListener('dblclick', cambiarTexto2, false);
+		}
+		function cambiarTexto(){
+			document.getElementById('par1').innerHTML='He cambiado el texto';
+		}
+		function cambiarTexto2(){
+			document.getElementById('par1').innerHTML='&#9889; &#9889; &#9889; &#9889; &#9889; &#9889; Doble click &#9889; &#9889; &#9889; &#9889; &#9889; &#9889;';
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		addEventListener('load', inicio, false);
+	</script>
+	<p id="par1">Soy un párrafo</p>
+</body>
+</html>
