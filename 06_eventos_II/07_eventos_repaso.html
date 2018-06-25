@@ -3,6 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Repaso Eventos</title>
+	<script type="text/javascript">
+		function iniciar(){
+			document.getElementById('nombre').addEventListener('focus',cambiarFondo, false);
+		}
+	</script>
 </head>
 <body>
 	<p>Nombre</p><input type="text" name="nombre">
